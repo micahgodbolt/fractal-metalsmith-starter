@@ -1,5 +1,5 @@
 ---
-view: layout.twig
+view: home.twig
 title: this rocks
 ---
 

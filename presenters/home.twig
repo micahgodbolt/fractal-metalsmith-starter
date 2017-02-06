@@ -1,0 +1,19 @@
+{% extends '../design/components/page/page.twig' %}
+
+{% block header %}
+    {% include '../design/components/navigation/navigation.twig' %}
+{% endblock %}
+
+{% block body %}
+   {{contents}}
+
+    {% for item in metadata.collections.posts %}
+        {% include '../design/components/post/post--excerpt.twig' with {
+            published: item.date,
+            path: item.path,
+            title: item.title,
+            excerpt: item.excerpt
+        }  only %}
+    {% endfor %}
+
+{% endblock %}

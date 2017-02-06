@@ -5,5 +5,9 @@
 {% endblock %}
 
 {% block body %}
-   {{contents}}
+    {% include '../design/components/post/post.twig' with {
+        published: date,
+        title: title,
+        contents: contents
+    }  only %}
 {% endblock %}
