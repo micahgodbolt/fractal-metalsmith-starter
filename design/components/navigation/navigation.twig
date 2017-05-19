@@ -1,4 +1,5 @@
 <h1>My Awesome Site</h1>
 <ul>
     <li><a href="/">Home</a></li>
+    {% include 'link/link.twig' with { href: '#', text: 'Text of the link' } only %}
 </ul>
